@@ -31,7 +31,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'webpack test',
+      title: 'Weather app',
     }),
   ],
   optimization: {
