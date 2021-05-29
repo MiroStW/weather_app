@@ -15,11 +15,5 @@ const getWeatherData = async (lat, lon) => {
 export default async (lat, lon) => {
   const weatherObject = await getWeatherData(lat,lon);
 
-  console.log(weatherObject);
-  console.log(weatherObject.name);
-  console.log(weatherObject.weather[0].main);
-  console.log(weatherObject.main.temp);
-  console.log(
-    `https://openweathermap.org/img/wn/${weatherObject.weather[0].icon}@4x.png`
-  );
+  return weatherObject
 };
