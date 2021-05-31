@@ -3,7 +3,9 @@ import "regenerator-runtime/runtime";
 
 const getWeatherData = async (lat, lon) => {
   const data = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=944ab13f6c35a86d9df37f8035ffb962`
+    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=944ab13f6c35a86d9df37f8035ffb962&units=${
+      document.querySelector('.tempUnitToggle').getAttribute('data-tempUnit')
+    }`
   );
   const weather = await data.json();
   if (weather.cod === 200) {
@@ -13,7 +15,7 @@ const getWeatherData = async (lat, lon) => {
 };
 
 export default async (lat, lon) => {
-  const weatherObject = await getWeatherData(lat,lon);
+  const weatherObject = await getWeatherData(lat, lon);
 
-  return weatherObject
+  return weatherObject;
 };

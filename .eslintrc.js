@@ -9,6 +9,6 @@ module.exports = {
     sourceType: "module",
   },
   rules: {
-    // "no-unused-expressions": ["error", { allowTernary: true }],
+    "no-unused-expressions": ["error", { allowTernary: true }],
   },
 };
